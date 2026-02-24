@@ -11,7 +11,8 @@
 <br>
 
 <p align="center">
-  <a href="https://pypi.org/project/cup"><img src="https://img.shields.io/pypi/v/cup?style=for-the-badge&color=FF6F61&labelColor=000000" alt="PyPI"></a>
+  <a href="https://pypi.org/project/computer-use-protocol"><img src="https://img.shields.io/pypi/v/computer-use-protocol?style=for-the-badge&color=FF6F61&labelColor=000000&label=PyPI" alt="PyPI"></a>
+  <a href="https://www.npmjs.com/package/computer-use-protocol"><img src="https://img.shields.io/npm/v/computer-use-protocol?style=for-the-badge&color=CB3837&labelColor=000000&label=npm" alt="npm"></a>
   <a href="https://github.com/computeruseprotocol/computer-use-protocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-0cc0df?style=for-the-badge&labelColor=000000" alt="MIT License"></a>
   <a href="https://computeruseprotocol.com"><img src="https://img.shields.io/badge/Website-7ed957?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=000000" alt="Website"></a>
 </p>
@@ -35,22 +36,32 @@ AI agents like Claude Computer Use, OpenAI CUA, and Microsoft UFO2 each independ
 
 ## Quick start
 
+**Python:**
+
 ```bash
-pip install cup
+pip install computer-use-protocol
 ```
 
 ```python
 import cup
 
-# Full accessibility tree as a CUP envelope (dict)
-envelope = cup.get_tree()
-
-# Just the foreground window
-envelope = cup.get_foreground_tree()
-
-# Compact text format — optimized for LLM context windows
-text = cup.get_compact()
+envelope = cup.get_tree()          # Full accessibility tree
+text = cup.get_compact()           # LLM-optimized compact format
 print(text)
+```
+
+**TypeScript:**
+
+```bash
+npm install computer-use-protocol
+```
+
+```typescript
+import { getTree, getCompact } from "computer-use-protocol";
+
+const envelope = await getTree();       // Full tree
+const compact = await getCompact();     // Compact format
+console.log(compact);
 ```
 
 Output (compact format):
@@ -70,6 +81,8 @@ Output (compact format):
 
 ## Platform support
 
+**Python SDK:**
+
 | Platform | Tree Capture | Actions |
 |----------|-------------|---------|
 | Windows | Stable | Stable |
@@ -79,13 +92,24 @@ Output (compact format):
 | Android | Planned | Planned |
 | iOS | Planned | Planned |
 
+**TypeScript SDK:**
+
+| Platform | Tree Capture | Actions |
+|----------|-------------|---------|
+| Web (Chrome) | Stable | Stable |
+| Windows | Stub | Stub |
+| macOS | Stub | Stub |
+| Linux | Stub | Stub |
+| Android | Planned | Planned |
+| iOS | Planned | Planned |
+
 ## Schema
 
 CUP defines a JSON envelope format built on ARIA roles:
 
 - **54 ARIA-derived roles** — the universal subset that maps cleanly across all 6 platforms
 - **16 state flags** — only truthy/active states are listed (absence = default)
-- **15 canonical actions** — what can an agent *do* with this element?
+- **15 element-level actions** + session-level `press_keys` — what can an agent *do* with this element?
 - **Platform escape hatch** — raw native properties preserved in `node.platform.*` for advanced use
 
 Full schema: [cup.schema.json](https://github.com/computeruseprotocol/computer-use-protocol/blob/main/schema/cup.schema.json) | Compact format: [compact.md](https://github.com/computeruseprotocol/computer-use-protocol/blob/main/schema/compact.md) | Role mappings: [mappings.json](https://github.com/computeruseprotocol/computer-use-protocol/blob/main/schema/mappings.json)
@@ -95,12 +119,14 @@ Full schema: [cup.schema.json](https://github.com/computeruseprotocol/computer-u
 | Repository | Description |
 |-----------|-------------|
 | [computer-use-protocol](https://github.com/computeruseprotocol/computer-use-protocol) | Protocol specification, schema, and documentation |
-| [python-sdk](https://github.com/computeruseprotocol/python-sdk) | Python SDK — `pip install cup` |
+| [python-sdk](https://github.com/computeruseprotocol/python-sdk) | Python SDK — `pip install computer-use-protocol` |
+| [typescript-sdk](https://github.com/computeruseprotocol/typescript-sdk) | TypeScript SDK — `npm install computer-use-protocol` |
 
 ## Documentation
 
 - **[Protocol Specification](https://github.com/computeruseprotocol/computer-use-protocol)** — Schema, roles, states, actions, compact format
 - **[Python SDK](https://github.com/computeruseprotocol/python-sdk)** — Installation, API reference, MCP server
+- **[TypeScript SDK](https://github.com/computeruseprotocol/typescript-sdk)** — Installation, API reference, MCP server
 - **[API Reference](https://github.com/computeruseprotocol/python-sdk/blob/main/docs/api-reference.md)** — Session API, actions, envelope format
 
 ## Contributing
@@ -109,7 +135,8 @@ CUP is in early development (v0.1.0). Contributions welcome:
 
 - **Specification** — role/action proposals, schema improvements, platform mappings → [computer-use-protocol](https://github.com/computeruseprotocol/computer-use-protocol/blob/main/CONTRIBUTING.md)
 - **Python SDK** — platform adapters, action execution, tests → [python-sdk](https://github.com/computeruseprotocol/python-sdk/blob/main/CONTRIBUTING.md)
-- **New language SDKs** — TypeScript, Go, Rust, and more
+- **TypeScript SDK** — native adapters, action execution, tests → [typescript-sdk](https://github.com/computeruseprotocol/typescript-sdk/blob/main/CONTRIBUTING.md)
+- **New language SDKs** — Go, Rust, and more
 
 ## License
 
