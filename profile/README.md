@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  <a href="https://pypi.org/project/computeruseprotocol"><img src="https://img.shields.io/pypi/v/computeruseprotocol?style=for-the-badge&color=FF6F61&labelColor=000000&label=PyPI" alt="PyPI"></a>
+  <a href="https://pypi.org/project/computeruseprotocol"><img src="https://img.shields.io/pypi/v/computeruseprotocol?style=for-the-badge&color=FF6F61&labelColor=000000&label=PyPI&v=1" alt="PyPI"></a>
   <a href="https://www.npmjs.com/package/computeruseprotocol"><img src="https://img.shields.io/npm/v/computeruseprotocol?style=for-the-badge&color=CB3837&labelColor=000000&label=npm" alt="npm"></a>
   <a href="https://github.com/computeruseprotocol/computeruseprotocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-0cc0df?style=for-the-badge&labelColor=000000" alt="MIT License"></a>
   <a href="https://computeruseprotocol.com"><img src="https://img.shields.io/badge/Website-7ed957?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=000000" alt="Website"></a>
