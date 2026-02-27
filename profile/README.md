@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/computeruseprotocol"><img src="https://img.shields.io/npm/v/computeruseprotocol" alt="npm version"></a>
   <a href="https://pypi.org/project/computeruseprotocol/"><img src="https://img.shields.io/pypi/v/computeruseprotocol" alt="PyPI version"></a>
-  <a href="https://github.com/computeruseprotocol/computer-use-protocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
+  <a href="https://github.com/computeruseprotocol/computeruseprotocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
   <a href="https://computeruseprotocol.com"><img src="https://img.shields.io/badge/website-computeruseprotocol.com-green" alt="Website"></a>
 </p>
 
@@ -54,7 +54,7 @@ npm install computeruseprotocol
 
 | Repository | Description |
 |-----------|-------------|
-| [computer-use-protocol](https://github.com/computeruseprotocol/computer-use-protocol) | Protocol specification — JSON schema, role mappings, compact format spec |
+| [computeruseprotocol](https://github.com/computeruseprotocol/computeruseprotocol) | Protocol specification — JSON schema, role mappings, compact format spec |
 | [python-sdk](https://github.com/computeruseprotocol/python-sdk) | Python SDK — tree capture, actions, MCP server |
 | [typescript-sdk](https://github.com/computeruseprotocol/typescript-sdk) | TypeScript SDK — tree capture, actions, MCP server |
 
@@ -67,7 +67,7 @@ SDKs implement the protocol. They capture native accessibility trees, normalize 
 | Python | `pip install computeruseprotocol` |
 | TypeScript | `npm install computeruseprotocol` |
 
-Building your own SDK? All you need is the [spec](https://github.com/computeruseprotocol/computer-use-protocol). Implement tree capture for your target platform, normalize into the CUP schema, and you're compatible with every tool in the ecosystem.
+Building your own SDK? All you need is the [spec](https://github.com/computeruseprotocol/computeruseprotocol). Implement tree capture for your target platform, normalize into the CUP schema, and you're compatible with every tool in the ecosystem.
 
 ## Contributing
 
@@ -75,4 +75,4 @@ CUP is in early development (v0.1.0). Contributions welcome — see the individu
 
 ## License
 
-[MIT](https://github.com/computeruseprotocol/computer-use-protocol/blob/main/LICENSE)
+[MIT](https://github.com/computeruseprotocol/computeruseprotocol/blob/main/LICENSE)
